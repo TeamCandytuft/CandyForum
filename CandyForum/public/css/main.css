@@ -28,3 +28,12 @@ header div.navbar-collapse ul.navbar-right{
     margin: auto;
     color: rgb(255, 156, 0);
 }
+#comment-form input[type=text] {
+    font-size: 25px;
+}
+#comment-form input{
+    margin-top: 15px;
+}
+#comment-form :nth-of-type(2){
+    margin-bottom: 15px;
+}

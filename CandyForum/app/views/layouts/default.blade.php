@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('./css/main.css') }}"/>
     <script src="{{ asset('./js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ asset('./js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/common.js') }}"></script>
 </head>
 <body>
     <div class="container">
@@ -30,7 +31,7 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             @if( Auth::check() )
-                            <li><a href="user/profile/show">{{'Hello, '. Auth::user()->username}}</a></li>
+                            <li><a href="/user/profile/show">{{'Hello, '. Auth::user()->username}}</a></li>
                             <li><a href="/logout">Log out</a></li>
                             @else
                             <li><a href="/login">Log In</a></li>
@@ -45,6 +46,9 @@
     <div class="container main-content">
         <main class="row">
             <aside class="col-lg-3" id="categories">
+                @if(Auth::check())
+                    <button type="button" onclick="addPost();">Add Post</button>
+                @endif
                 <h2>Categories</h2>
                 <ul id="categories-list">
                     <li><a href="">Lorem ipsum dolor sit amet,</a></li>

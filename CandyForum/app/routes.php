@@ -69,7 +69,7 @@ Route::post('/login', function()
     $credentials = Input::only('username', 'password');
 
     if (Auth::attempt($credentials)) {
-    return Redirect::intended('/');
+    return Redirect::intended('/posts');
     }
     return Redirect::to('login');
 });
@@ -89,4 +89,5 @@ Route::get('spotlight', array(
 ));
 
 /* --- POSTS ROUTES --- */
-Route::get('posts', array('before' => 'auth', 'uses' => 'PostController@get_index'));
+Route::get('posts', array('before' => 'auth', 'uses' => 'PostController@index'));
+Route::get('posts/create', array('before' => 'auth', 'uses' => 'PostController@create'));
