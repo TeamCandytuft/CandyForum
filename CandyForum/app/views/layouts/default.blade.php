@@ -28,6 +28,10 @@
                             <li><a href="">test2</a></li>
                             <li><a href="">test3</a></li>
                         </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/login">Log In</a></li>
+                            <li><a href="/register">Register</a></li>
+                        </ul>
                     </div>
                 </nav>
             </div>

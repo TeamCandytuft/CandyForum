@@ -1,3 +1,6 @@
 .main-content{
     margin-top: 75px;
 }
+header div.navbar-collapse ul.navbar-right{
+    margin-right: 5px !important;
+}
