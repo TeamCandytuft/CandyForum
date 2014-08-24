@@ -39,6 +39,17 @@
     </div>
     <div class="container main-content">
         <main class="row">
+            <aside class="col-lg-3" id="categories">
+                <h2>Categories</h2>
+                <ul id="categories-list">
+                    <li><a href="">Lorem ipsum dolor sit amet,</a></li>
+                    <li><a href="">consectetur adipisicing elit.</a></li>
+                    <li><a href="">Architecto culpa distinctio</a></li>
+                    <li><a href="">ex facere harum hic id</a></li>
+                    <li><a href="">molestiae natus provident</a></li>
+                    <li><a href="">tempora tenetur! Beatae</a></li>
+                </ul>
+            </aside>
             @yield('content')
         </main>
         <div class="row">

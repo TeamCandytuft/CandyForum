@@ -41,10 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="50" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.7049743" vertical-offset="133" max-vertical-offset="918">
+            <state line="47" column="57" selection-start="2274" selection-end="2274" vertical-scroll-proportion="-15.884615" vertical-offset="386" max-vertical-offset="1105">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="15" selection-start="499" selection-end="499" vertical-scroll-proportion="0.72577995" vertical-offset="0" max-vertical-offset="609">
               <folding />
             </state>
           </provider>
@@ -80,8 +89,8 @@
         <option value="$PROJECT_DIR$/app/views/register.blade.php" />
         <option value="$PROJECT_DIR$/app/views/spotlight.blade.php" />
         <option value="$PROJECT_DIR$/public/css/spacelab.theme.css" />
-        <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/app/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
       </list>
     </option>
   </component>
@@ -435,13 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/spacelab.theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6342" column="1" selection-start="146441" selection-end="146441" vertical-scroll-proportion="0.96347827" vertical-offset="107260" max-vertical-offset="107916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
@@ -484,16 +486,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+    <entry file="file://$PROJECT_DIR$/public/css/spacelab.theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="102" selection-end="102" vertical-scroll-proportion="0.111658454" vertical-offset="0" max-vertical-offset="609">
+        <state line="4080" column="10" selection-start="85058" selection-end="85067" vertical-scroll-proportion="0.33274958" vertical-offset="69170" max-vertical-offset="107916">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="50" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.7049743" vertical-offset="133" max-vertical-offset="918">
+        <state line="47" column="57" selection-start="2274" selection-end="2274" vertical-scroll-proportion="-15.884615" vertical-offset="386" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="15" selection-start="499" selection-end="499" vertical-scroll-proportion="0.72577995" vertical-offset="0" max-vertical-offset="609">
           <folding />
         </state>
       </provider>
