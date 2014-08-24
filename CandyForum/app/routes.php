@@ -28,6 +28,7 @@ Route::get('/', function()
 
     Schema::create('posts', function($post_table){
         $post_table->increments('id');
+        $post_table->string('header', 200);
         $post_table->string('content', 100);
         $post_table->string('tags', 200);
         $post_table->integer('author_id');
