@@ -88,4 +88,4 @@ Route::get('spotlight', array(
 ));
 
 /* --- POSTS ROUTES --- */
-Route::get('post', array('before' => 'auth', 'uses' => 'PostController@get_index'));
+Route::get('posts', array('before' => 'auth', 'uses' => 'PostController@get_index'));
