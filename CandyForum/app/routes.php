@@ -36,7 +36,7 @@ Route::get('/', function()
         $post_table->timestamps();
     });
     */
-	return View::make('hello');
+	return View::make('index');
 });
 
 Route::get('/register', function()
