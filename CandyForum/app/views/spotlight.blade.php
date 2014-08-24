@@ -1,24 +1,5 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Student Spotlight</title>
-<link href="{{ asset('_css/main.css') }}" rel="stylesheet" media="screen, projection">
-</head>
-<body>
-<header class="spotlightHeader pageHeader">
-<h1>Roux Academy of Art and Design<a href="/index.htm" title="home"></a></h1>
-<nav id="pageNav" class="cf">
-  <ul>
-    <li><a href="programs/programs.htm" title="programs">Programs</a></li>
-    <li><a href="admissions/admissions.htm" title="admissions">Admissions</a></li>
-    <li><a href="student_portal.htm" title="student portal">Student Portal</a></li>
-    <li><a href="campus_portal.htm" title="campus portal">Campus</a></li>    <li><a href="alumni.htm" title="alumni">Alumni</a></li>
-    <li><a href="blog/index.php"  title="Roux Academy Official Blog">Blog</a></li>
-    <li><a href="about/about.htm"  title="about Roux Academy">About</a></li>
-</ul>
-</nav>
-</header>
+@extends('layouts/default')
+@section('content')
 <article id="spotlight" class="cf">
  <img src="{{ asset('_images/chow.jpg') }}" width="255" height="400" alt="Gerald Chow" class="student">
  <div class="student">
@@ -66,67 +47,4 @@ Gerald Chow will graduate from Roux Academy this spring with a BFA and a paintin
   </div>
   <p class="quote">“I’m fascinated with <span class="lavender">urban artwork</span>. Unlike pieces you find in a museum, they become a <span class="orange">living part</span> of the environment they inhabit and create a running <span class="blue">dialog</span> with the viewer.”</p>
   </article>
-  <footer id="pageFooter" class="cf">
-<nav class="footerNav">
-<section class="col">
-<h3>About Roux Academy</h3>
-  <div class="col1">
-  <ul>
-  <li><a href="mission.htm" title="Our mission">Mission Statement</a></li>
-  <li><a href="history.htm" title="school history">School History</a></li>
-  <li><a href="accreditation.htm" title="accreditation and affliates">Accreditation &amp; Affiliates</a></li>
-  <li><a href="board.htm" title="board members">Board Members</a></li>
-  </ul>
-  </div>
-  <div class="col2">
-  <ul>
-  <li><a href="faculty.htm" title="faculty and staff">Faculty &amp; Staff</a></li>
-  <li><a href="visiting_professors.htm" title="visiting professors">Visiting Professors</a></li>
-  <li><a href="museum.htm" title="Maribielle Roux Museum">Marbielle Roux Museum</a></li>
-  <li><a href="directions.htm" title="directions">Map &amp; Directions</a></li>
-  </ul>
-  </div>
-</section>
-<section class="col">
-<h3>Admissions &amp; Programs</h3>
-  <div class="col1">
-  <ul>
-  <li><a href="degrees.htm" title="Degree programs">Degree Programs</a></li>
-  <li><a href="catalog.htm" title="course catalog">Course Catalog</a></li>
-  <li><a href="fine_art.htm" title="fine art programs">Fine Art Programs</a></li>
-  <li><a href="design.htm" title="design concentration">Design Concentration</a></li>
-  </ul>
-  </div>
-  <div class="col2">
-  <ul>
-  <li><a href="fashion.htm" title="fashion program">Fashion Program</a></li>
-  <li><a href="product_design.htm" title="product design">Product Design</a></li>
-  <li><a href="continuing_ed.htm" title="Continuing Education">Continuing Education</a></li>
-  <li><a href="financial_aid.htm" title="tuition and financial aid">Tuition &amp; Financial Aid</a></li>
-  </ul>
-  </div>
-</section>
-<section class="col">
-<h3>Student Resources</h3>
-  <div class="col1">
-  <ul>
-  <li><a href="campus.htm" title="Campus information">Campus Information</a></li>
-  <li><a href="housing.htm" title="student housing">Student Housing</a></li>
-  <li><a href="contact.htm" title="transcript request">Transcript Request</a></li>
-  <li><a href="applying.htm" title="application process">Application Process</a></li>
-  </ul>
-  </div>
-  <div class="col2">
-  <ul>
-  <li><a href="portfolio_review.htm" title="portfolio review">Portfolio Review</a></li>
-  <li><a href="conselling.htm" title="career counselling">Career Counselling</a></li>
-  <li><a href="internships.htm" title="internship programs">Internship Programs</a></li>
-  <li><a href="student_portal.htm" title="student portal login">Student Portal Login</a></li>
-   </ul>
-  </div>
-</section>
-</nav>
-<p>&copy;Copyright  Roux Academy of Art &amp; Design.  All rights reserved.<a href="privacy.htm" title="privacy statement"> Privacy Statement</a> |<a href="legal.htm" title="legal terms"> Legal Terms and Conditions</a> |<a href="disclosures.htm" title="student outcomes and disclosures"> Student Outcomes/Disclosures</a></p>
-</footer>
-</body>
-</html>
+ @stop
