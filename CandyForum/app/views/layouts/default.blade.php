@@ -29,8 +29,13 @@
                             <li><a href="">test3</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
+                            @if( Auth::check() )
+                            <li><a href="user/profile/show">{{'Hello, '. Auth::user()->username}}</a></li>
+                            <li><a href="/logout">Log out</a></li>
+                            @else
                             <li><a href="/login">Log In</a></li>
                             <li><a href="/register">Register</a></li>
+                            @endif
                         </ul>
                     </div>
                 </nav>
