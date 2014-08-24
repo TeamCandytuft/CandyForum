@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
 <section>
-    <p>Some home page content</p>
+    <p>Some home page content goes here</p>
 </section>
 @stop

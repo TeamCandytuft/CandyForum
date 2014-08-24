@@ -9,6 +9,7 @@
     <script src="{{ asset('./js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ asset('./js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/common.js') }}"></script>
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 </head>
 <body>
     <div class="container">
