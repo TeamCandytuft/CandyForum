@@ -31,9 +31,6 @@ header div.navbar-collapse ul.navbar-right{
 #comment-form input[type=text] {
     font-size: 25px;
 }
-#comment-form input{
-    margin-top: 15px;
-}
-#comment-form :nth-of-type(1){
-    margin-bottom: 15px;
+#comment-form input, select{
+    margin: 15px 0;
 }
