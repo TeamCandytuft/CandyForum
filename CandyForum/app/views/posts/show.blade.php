@@ -1,6 +1,36 @@
 @extends('layouts.default')
 @section('content')
-<?php
-var_dump($posts);
-?>
+<div class="date-outer">
+    <div class="date-posts">
+        <div class="post-outer">
+        	<?php foreach ($posts as $post) { ?>
+	            <article class="post hentry">
+	                <div class="post-body entry-content clearfix">
+	                    <div class="bpostmeta">
+	                        <span><i class="fa fa-clock-o"></i><?php echo date("jS F, Y", strtotime($post["created_at"])); ?></span>
+	                        <span><i class="fa fa-user"></i> Posted by <?php echo $post["author"]; ?></span>
+	                        <span><i class="fa fa-bookmark"></i><?php echo $post["tags"];?></span>
+	                        <span><i class="fa fa-comments"></i>1 comment</span>
+	                    </div>
+	                    <h2 class="post-title entry-title"><span class="post_title_icon"></span>
+	                        <a href="#"><?php echo $post["header"];?></a>
+	                    </h2>
+	                
+	                    <div class="entry-colors">
+	                        <div class="color_col_1"></div>
+	                        <div class="color_col_2"></div>
+	                        <div class="color_col_3"></div>
+	                    </div>
+	                    <div id="">
+	                        <div><?php echo substr($post["content"], 0, 200); ?></div>
+	                    </div>
+	                </div>
+	            </article>
+	            <div style="clear: both;"></div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+</div>
+<div style="clear: both;"></div>
 @stop
