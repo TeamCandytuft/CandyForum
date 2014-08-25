@@ -58,7 +58,9 @@
                     @endforeach
                 </ul>
             </aside>
-            @yield('content')
+            <section class="col-lg-8">
+                @yield('content')
+            </section>
         </main>
         <div class="row">
             <h2>Candy Forum footer</h2>
