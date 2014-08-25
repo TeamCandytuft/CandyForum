@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="27" selection-start="632" selection-end="632" vertical-scroll-proportion="0.8045977" vertical-offset="71" max-vertical-offset="697">
+            <state line="33" column="27" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="697">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="36" selection-start="75" selection-end="75" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="153">
               <folding />
             </state>
           </provider>
@@ -36,6 +45,15 @@
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="47" column="0" selection-start="1524" selection-end="1524" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="1632">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/PostController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="32" selection-start="693" selection-end="693" vertical-scroll-proportion="0.42367068" vertical-offset="399" max-vertical-offset="1683">
               <folding />
             </state>
           </provider>
@@ -53,7 +71,7 @@
       <file leaf-file-name="create.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/posts/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="32" selection-start="547" selection-end="547" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="425">
+            <state line="9" column="47" selection-start="447" selection-end="447" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="425">
               <folding>
                 <element signature="n#style#0;n#a#0;n#form#0;n#!!top" expanded="true" />
               </folding>
@@ -75,14 +93,14 @@
         <option value="$PROJECT_DIR$/app/database/migrations/2014_08_25_100225_create_categories.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_08_24_100649_create_posts.php" />
         <option value="$PROJECT_DIR$/app/models/Post.php" />
-        <option value="$PROJECT_DIR$/app/controllers/PostController.php" />
         <option value="$PROJECT_DIR$/app/views/posts/show.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Category.php" />
         <option value="$PROJECT_DIR$/app/controllers/CategoryController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/views/posts/create.blade.php" />
         <option value="$PROJECT_DIR$/app/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/app/views/posts/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/PostController.php" />
       </list>
     </option>
   </component>
@@ -181,6 +199,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CandyForum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CandyForum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CandyForum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CandyForum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,20 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.94168097" vertical-offset="998" max-vertical-offset="1666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="75" selection-end="75" vertical-scroll-proportion="0.05831904" vertical-offset="0" max-vertical-offset="583">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="32" selection-start="67" selection-end="67" vertical-scroll-proportion="0.05831904" vertical-offset="0" max-vertical-offset="583">
@@ -454,15 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="547" selection-end="547" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="425">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="0" selection-start="1524" selection-end="1524" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="1632">
@@ -472,7 +503,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="27" selection-start="632" selection-end="632" vertical-scroll-proportion="0.8045977" vertical-offset="71" max-vertical-offset="697">
+        <state line="33" column="27" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="36" selection-start="75" selection-end="75" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/posts/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="47" selection-start="447" selection-end="447" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="425">
+          <folding>
+            <element signature="n#style#0;n#a#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="32" selection-start="693" selection-end="693" vertical-scroll-proportion="0.42367068" vertical-offset="399" max-vertical-offset="1683">
           <folding />
         </state>
       </provider>

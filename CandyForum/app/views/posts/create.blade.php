@@ -7,7 +7,7 @@
 <script>
     CKEDITOR.replace('editor');
 </script>
-    <select class="form-control" name="categories">
+    <select class="form-control" name="category">
         <option value="-1" disabled selected>Category</option>
         <?php $categories = Category::all(); ?>
         @foreach($categories as $category)
