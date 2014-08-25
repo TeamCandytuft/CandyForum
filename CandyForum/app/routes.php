@@ -45,46 +45,15 @@ Route::get('/', function()
 	return View::make('index');
 });
 
-Route::get('/register', function()
-{
-    return View::make('register');
-});
+Route::get('/register', array('uses' => 'HomeController@showRegister'));
 
-Route::post('/register', function()
-{
-    $users = new User;    
-    $users->username = Input::get('username');
-    $users->password = Hash::make(Input::get('password'));
-    $users->password_confirm = Hash::make(Input::get('password_confirm'));
-    $users->name = Input::get('name');
-    $users->last_name = Input::get('last_name');
-    $users->email = Input::get('email');
-    $users->save();
-    
-    $name = Input::get('name');       
-    return View::make('thanks')->with('name', $name);    
-});/*1.29*/
+Route::post('/register', array('uses' => 'HomeController@doRegister'));
 
-Route::get('/login', function()
-{
-    return View::make('login');
-});
+Route::get('/login', array('uses' => 'HomeController@showLogin'));
 
-Route::post('/login', function()
-{
-    $credentials = Input::only('username', 'password');
+Route::post('/login', array('uses' => 'HomeController@doLogin'));
 
-    if (Auth::attempt($credentials)) {
-    return Redirect::intended('/posts');
-    }
-    return Redirect::to('login');
-});
-
-Route::get('/logout', function()
-{
-    Auth::logout();
-    return View::make('logout');
-});
+Route::get('logout', array('uses' => 'HomeController@doLogout'));
 
 Route::get('spotlight', array(
     'before' => 'auth' ,
