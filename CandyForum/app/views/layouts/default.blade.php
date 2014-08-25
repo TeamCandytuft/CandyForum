@@ -52,12 +52,10 @@
                 @endif
                 <h2>Categories</h2>
                 <ul id="categories-list">
-                    <li><a href="">Lorem ipsum dolor sit amet,</a></li>
-                    <li><a href="">consectetur adipisicing elit.</a></li>
-                    <li><a href="">Architecto culpa distinctio</a></li>
-                    <li><a href="">ex facere harum hic id</a></li>
-                    <li><a href="">molestiae natus provident</a></li>
-                    <li><a href="">tempora tenetur! Beatae</a></li>
+                    <?php $categories = Category::all(); ?>
+                    @foreach($categories as $category)
+                    <li value="{{ $category->id }}">{{ $category->name }}</li>
+                    @endforeach
                 </ul>
             </aside>
             @yield('content')

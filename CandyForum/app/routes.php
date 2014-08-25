@@ -32,8 +32,14 @@ Route::get('/', function()
         $post_table->string('content', 100);
         $post_table->string('tags', 200);
         $post_table->integer('author_id');
-        //$user_table->string('remember_token', 100);->nullable();
+        $post_table->integer('category_id');
         $post_table->timestamps();
+    });
+
+    Schema::create('categories', function($category_table){
+        $category_table->increments('id');
+        $category_table->string('name', 100)->unique();
+        $category_table->timestamps();
     });
     */
 	return View::make('index');
@@ -91,4 +97,4 @@ Route::get('spotlight', array(
 /* --- POSTS ROUTES --- */
 Route::get('posts', array('before' => 'auth', 'uses' => 'PostController@index'));
 Route::get('posts/create', array('before' => 'auth', 'uses' => 'PostController@create'));
-Route::post('posts/view', array('uses' => 'PostController@show'));
+Route::post('posts/view', array('before' => 'csrf', 'uses' => 'PostController@store'));

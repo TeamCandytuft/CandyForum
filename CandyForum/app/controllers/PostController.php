@@ -31,7 +31,13 @@ class PostController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$post = new Post;
+        $post->header = $_POST['header'];
+        $post->content = $_POST['content'];
+        $post->author_id = Auth::user()->id;
+        $post->tags = 'test,test2';
+        $post->save();
+        return View::make('posts.index');
 	}
 
 
