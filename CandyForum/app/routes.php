@@ -96,5 +96,6 @@ Route::get('spotlight', array(
 
 /* --- POSTS ROUTES --- */
 Route::get('posts', array('before' => 'auth', 'uses' => 'PostController@index'));
+Route::post('posts', array('before' => 'csrf', 'uses' => 'PostController@store'));
 Route::get('posts/create', array('before' => 'auth', 'uses' => 'PostController@create'));
-Route::post('posts/view', array('before' => 'csrf', 'uses' => 'PostController@store'));
+Route::get('posts/show/{id}', array('uses' => 'PostController@show@$id'));

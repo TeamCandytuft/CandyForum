@@ -48,9 +48,14 @@ class PostController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show()
+	public function show($id)
 	{
-		return View::make('posts.show');
+        $posts = Post::where('category_id', '=', $id)->get();
+        $result = array();
+        foreach($posts as $post){
+            $result[] = $post['original'];
+        }
+		return View::make('posts.show')->with('posts', $result);
 	}
 
 

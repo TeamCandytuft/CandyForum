@@ -54,7 +54,7 @@
                 <ul id="categories-list">
                     <?php $categories = Category::all(); ?>
                     @foreach($categories as $category)
-                    <li value="{{ $category->id }}">{{ $category->name }}</li>
+                    <li><a href="/posts/show/{{ $category->id }}">{{ $category->name }}</a></li>
                     @endforeach
                 </ul>
             </aside>
