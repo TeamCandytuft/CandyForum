@@ -2,7 +2,7 @@
 class Posts{
     public static function  allPosts($id = -1){
         if($id == -1){
-            $posts = Post::all();
+            $posts = Post::orderBy('created_at', 'DESC')->get();
         }
         else{
             $posts = Post::where('category_id', '=', $id)->get();
@@ -15,7 +15,13 @@ class Posts{
             {
                 $result[$count]['author'] = '';
             }
-            $result[$count]['author'] = User::where('id', '=', $result[$count]['author_id'])->get()[0]['username'];
+            if(!isset($result[$count]['category']))
+            {
+                $result[$count]['category'] = '';
+            }
+            $result[$count]['author'] = User::where('id', '=', $result[$count]['author_id'])->get()->first()['original']['username'];
+            $result[$count]['category'] = Category::where('id', '=', $result[$count]['category_id'])->get()[0]['name'];
+            unset($result[$count]['']);
             $count += 1;
         }
         return $result;

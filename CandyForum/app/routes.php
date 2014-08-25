@@ -14,17 +14,17 @@
 Route::get('/', function()
 {
     /*
-    Schema::create('users', function($user_table){
-        $user_table->increments('id');
-        $user_table->string('username', 100)->unique();
-        $user_table->string('password', 128);
-        $user_table->string('password_confirm', 128);
-        $user_table->string('name', 100);
-        $user_table->string('last_name', 100);
-        $user_table->string('email')->unique();
-        //$user_table->string('remember_token', 100);->nullable();
-        $user_table->timestamps();
-    });
+    Schema::create('users', function($newtable)
+        {
+            $newtable->increments('id');
+            $newtable->string('username', 100)->unique();
+            $newtable->string('password', 128);
+            $newtable->string('name', 100);
+            $newtable->string('last_name', 100);
+            $newtable->string('email')->unique();
+            $newtable->string('remember_token', 100)->nullable();
+            $newtable->timestamps();
+        });
 
     Schema::create('posts', function($post_table){
         $post_table->increments('id');
@@ -40,6 +40,11 @@ Route::get('/', function()
         $category_table->increments('id');
         $category_table->string('name', 100)->unique();
         $category_table->timestamps();
+    });
+    Schema::create('tags', function($tag_table){
+        $tag_table->increments('id');
+        $tag_table->string('name', 100)->unique();
+        $tag_table->timestamps();
     });
     */
 	return View::make('index');

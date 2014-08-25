@@ -37,7 +37,7 @@ class PostController extends \BaseController {
         $post->content = $_POST['content'];
         $post->author_id = Auth::user()->id;
         $post->category_id = $_POST['category'];
-        $post->tags = 'empty tag';
+        $post->tags = $_POST['tags'];
         $post->save();
         $posts = Posts::allPosts();
         return View::make('posts.index')->with('posts', $posts);

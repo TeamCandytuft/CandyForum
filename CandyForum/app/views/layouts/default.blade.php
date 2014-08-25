@@ -5,11 +5,13 @@
     <link rel="stylesheet" href="{{ asset('./css/reset.css') }}"/>
     <link rel="stylesheet" href="{{ asset('./css/bootstrap.css') }}"/>
     <link rel="stylesheet" href="{{ asset('./css/spacelab.theme.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('./jqueryui/jquery-ui.min.css') }}"/>
     <link rel="stylesheet" href="{{ asset('./css/main.css') }}"/>
     <script src="{{ asset('./js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ asset('./js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/common.js') }}"></script>
-    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('./js/common.js') }}"></script>
+    <script src="{{ asset('./ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('./jqueryui/jquery-ui.min.js') }}"></script>
 </head>
 <body>
     <div class="container">
