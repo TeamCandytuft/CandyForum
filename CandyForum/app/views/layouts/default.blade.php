@@ -47,16 +47,16 @@
     <div class="container main-content">
         <main class="row">
             <aside class="col-lg-3" id="categories">
-                @if(Auth::check())
-                    <button type="button" onclick="addPost();">Add Post</button>
-                @endif
-                <h2>Categories</h2>
-                <ul id="categories-list">
-                    <?php $categories = Category::all(); ?>
-                    @foreach($categories as $category)
-                    <li><a href="/posts/show/{{ $category->id }}">{{ $category->name }}</a></li>
-                    @endforeach
-                </ul>
+            @if(Auth::check())
+            <button type="button" onclick="addPost();">Add Post</button>
+            @endif
+            <h2>Categories</h2>
+            <ul id="categories-list">
+                <?php $categories = Category::all(); ?>
+                @foreach($categories as $category)
+                <li><a href="/posts/show/{{ $category->id }}">{{ $category->name }}</a></li>
+                @endforeach
+            </ul>
             </aside>
             <section class="col-lg-8">
                 @yield('content')

@@ -1,6 +1,6 @@
 @extends ('layouts.default')
 @section ('content')
-<form action="/posts" method="post" id="comment-form" class="col-lg-8 form-group">
+<form action="/posts" method="post" id="comment-form" class="col-lg-12 form-group">
 <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
 <input type="text" name="header" placeholder="Header" class="form-control"/>
 <textarea name="content" id="editor" class="form-control"></textarea>

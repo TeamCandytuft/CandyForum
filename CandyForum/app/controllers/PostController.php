@@ -9,7 +9,8 @@ class PostController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('posts.index');
+        $result = Posts::allPosts();
+		return View::make('posts.index')->with('posts', $result);
 	}
 
 
@@ -38,7 +39,8 @@ class PostController extends \BaseController {
         $post->category_id = $_POST['category'];
         $post->tags = 'empty tag';
         $post->save();
-        return View::make('posts.index');
+        $posts = Posts::allPosts();
+        return View::make('posts.index')->with('posts', $posts);
 	}
 
 
@@ -50,11 +52,7 @@ class PostController extends \BaseController {
 	 */
 	public function show($id)
 	{
-        $posts = Post::where('category_id', '=', $id)->get();
-        $result = array();
-        foreach($posts as $post){
-            $result[] = $post['original'];
-        }
+        $result = Posts::allPosts($id);
 		return View::make('posts.show')->with('posts', $result);
 	}
 
@@ -67,7 +65,14 @@ class PostController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$post = Post::where('id', '=', $id)->get();
+        $post->header = $_POST['header'];
+        $post->content = $_POST['content'];
+        $post->author_id = Auth::user()->id;
+        $post->category_id = $_POST['category'];
+        $post->tags = 'empty tag';
+        $post->update();
+        return View::make('posts.show@'.$id);
 	}
 
 

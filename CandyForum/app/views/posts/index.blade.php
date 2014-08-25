@@ -1,6 +1,8 @@
 @extends('layouts.default')
 @section('content')
 <section>
-    <p>Some post content</p>
+    <?php
+    var_dump($posts);
+    ?>
 </section>
 @stop
