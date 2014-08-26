@@ -51,12 +51,12 @@
                         <div class="thread">
                             <div class="answerBox"></div>
                             <button style="float:right;" id="answer-button" type="button" onclick="addAnswer()">Add new answer</button>
-
                             <form action="" method="post" id="answer-form" class="col-lg-12 form-group">
+                                <h2>Add new answer</h2>
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
                                 <input type="hidden" name="author_id" value="{{ Auth::id() }}"/>
                                 @if(Auth::id() == 0)
-                                    <input type="email" name="author" required placeholder="Enter email"/>
+                                    <input style="width: 280px; padding: 5px; margin: 5px 5px 5px 0px;" type="email" name="author" required placeholder="Enter email"/>
                                 @endif
                                 <textarea name="content" id="answer" class="form-control"></textarea>
                                 <input style="padding: 5px; margin: 5px;margin-left:0px;" type="submit" value="Submit" class="btn btn-md btn-default"/>
