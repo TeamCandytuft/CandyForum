@@ -10,7 +10,6 @@
 	                        <span><i class="fa fa-clock-o"></i><?php echo date("jS F, Y", strtotime($post["created_at"])); ?></span>
 	                        <span><i class="fa fa-user"></i> Posted by <?php echo $post["author"]; ?></span>
 	                        <span><i class="fa fa-bookmark"></i><?php echo $post["tags"];?></span>
-	                        <span><i class="fa fa-comments"></i>1 comment</span>
 	                    </div>
 	                    <h2 class="post-title entry-title"><span class="post_title_icon"></span>
 	                        <a href="/posts/show/{{ $post['id']}}"><?php echo $post["header"];?></a>

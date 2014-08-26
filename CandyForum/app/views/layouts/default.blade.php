@@ -15,11 +15,12 @@
     <link href="{{ asset('css/css.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
     
+    <script src="{{ asset('./js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ asset('js/migrate.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/modernizr.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/all.js') }}" type="text/javascript"></script>
     <!-- end new styles -->
-    <script src="{{ asset('./js/jquery-1.11.1.min.js') }}"></script>
+    
     <script src="{{ asset('./js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('./js/common.js') }}"></script>
     <script src="{{ asset('./ckeditor/ckeditor.js') }}"></script>
@@ -33,13 +34,6 @@
                 <!-- begin header -->
                 <header class="wrapperbpart clearfix">
                     <!-- begin logo -->
-                    <div class="headersec section" id="headersec">
-                        <div class="widget Header" id="Header1">
-                            <div id="header-inner">
-                                <img alt="Moments" id="Header1_headerimg" src="{{ asset('./css/logo.png') }}" style="display: block;padding:15px 0px 15px 0px;margin: 0px auto;" height="69px; " width="153px; ">
-                            </div>
-                        </div>
-                    </div>
                     <!-- end logo -->
 
                     <div class="mini_divider"></div>
@@ -50,15 +44,6 @@
                         </form>
                     </div>
                     <!-- end search form -->
-                    <div class="mini_divider"></div>
-                    @if( Auth::check() )
-                        <a href="/user/profile/show">{{'Hello, '. Auth::user()->username}}</a>
-                        <a href="/logout">Log out</a> <br>
-                        <button type="button" onclick="addPost();">Add Post</button>
-                    @else
-                        <a href="/login">Log In</a>
-                        <a href="/register">Register</a>
-                    @endif
                     <div class="mini_divider"></div>
                     <!-- begin main navigation -->
                     <div class="menu-mainmenu-container navbpart">
@@ -105,19 +90,23 @@
                         <!-- Sidebar Widgets Area -->
                         <div class="sidebar section" id="sidebartop">
                             <div class="widget HTML" id="HTML1">
-                                <h2 class="title">Latest questions</h2>
-                                <div class="widget-content">
-                                    <ul>
-                                        <li><a href="">Sample question with comments</a></li>
-                                        <li><a href="">This is question 1 </a></li>
-                                        <li><a href="">Sample question </a></li>
-                                        <li><a href="">Some randoms</a></li>
-                                        <li><a href="">Can you answer me</a></li>
-                                    </ul>
-                                </div>
+                                @if( Auth::check() )
+                                    <h2 class="title"><a href="/user/profile/show">{{'Hello, '. Auth::user()->username}}</a></h2>
+                                    <div class="widget-content">
+                                        <ul>
+                                            <li><a href="/posts/create">Add Post</a></li>
+                                            <li><a href="#">My questions</a></li>
+                                            <li><a href="#">Profile</a></li>
+                                            <li><a href="/logout">Log out</a></li>
+                                        </ul>
+                                    </div>
+                                @else
+                                    <h2 class="title"><a href="/login">Log In</a></h2>
+                                    <h2 class="title"><a href="/register">Register</a></h2>
+                                @endif
                                 <div class="clear"></div>
                             </div>
-                            <div class="widget HTML" id="HTML1">
+                            <!--<div class="widget HTML" id="HTML1">
                                 <h2 class="title">Unanswered</h2>
                                 <div class="widget-content">
                                     <ul>
@@ -129,7 +118,7 @@
                                     </ul>
                                 </div>
                                 <div class="clear"></div>
-                            </div>
+                            </div>-->
                         </div>
                         <!-- END Sidebar Widgets Area -->
                     </aside>
