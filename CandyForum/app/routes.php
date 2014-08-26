@@ -67,13 +67,6 @@ Route::post('/login', array('uses' => 'HomeController@doLogin'));
 
 Route::get('logout', array('uses' => 'HomeController@doLogout'));
 
-Route::get('spotlight', array(
-    'before' => 'auth' ,
-    function()
-{
-    return View::make('spotlight');
-}
-));
 
 /* --- POSTS ROUTES --- */
 Route::get('posts/show', array('uses' => 'PostController@index'));
