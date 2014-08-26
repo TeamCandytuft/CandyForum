@@ -43,7 +43,6 @@ class PostController extends \BaseController {
         return View::make('posts.index')->with('posts', $posts);
 	}
 
-
 	/**
 	 * Display the specified resource.
 	 *
@@ -52,10 +51,23 @@ class PostController extends \BaseController {
 	 */
 	public function show($id)
 	{
-        $result = Posts::allPosts($id);
-		return View::make('posts.show')->with('posts', $result);
+        $result = Posts::allPosts($id, 'category');
+		return View::make('posts.showAll')->with('posts', $result);
 	}
 
+    public function showPost($id)
+    {
+        $post = Posts::allPosts($id);
+        $answers = Answers::allAnswers($id);
+        $result = array();
+        $result['post'] = $post;
+        $count = 0;
+        foreach($answers as $answer){
+            $result['answers'][$count] = $answer['original'];
+            $count += 1;
+        }
+        return View::make('posts.show')->with('post', $result);
+    }
 
 	/**
 	 * Show the form for editing the specified resource.

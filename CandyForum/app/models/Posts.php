@@ -1,10 +1,14 @@
 <?php
 class Posts{
-    public static function  allPosts($id = -1){
+    public static function  allPosts($id = -1, $flag = ''){
         if($id == -1){
             $posts = Post::orderBy('created_at', 'DESC')->get();
         }
-        else{
+        else {
+            $posts = Post::where('id', '=', $id)->get();
+        }
+        if($flag == 'category')
+        {
             $posts = Post::where('category_id', '=', $id)->get();
         }
         $result = array();

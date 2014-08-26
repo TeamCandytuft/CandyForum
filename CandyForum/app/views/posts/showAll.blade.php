@@ -13,7 +13,7 @@
 	                        <span><i class="fa fa-comments"></i>1 comment</span>
 	                    </div>
 	                    <h2 class="post-title entry-title"><span class="post_title_icon"></span>
-	                        <a href="/posts/show/{{ $post['id']}}"><?php echo $post["header"];?></a>
+	                        <a href="/posts/show/{{ $post['id'] }}"><?php echo $post["header"];?></a>
 	                    </h2>
 	                
 	                    <div class="entry-colors">

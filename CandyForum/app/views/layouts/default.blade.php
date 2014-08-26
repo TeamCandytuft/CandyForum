@@ -70,7 +70,7 @@
                                         <li><a href="/posts/show">All</a></li>
                                         <?php $categories = Category::all(); ?>
                                         @foreach($categories as $category)
-                                        <li><a href="/posts/show/{{ $category->id }}">{{ $category->name }}</a></li>
+                                        <li><a href="/posts/show/category/{{ $category->id }}">{{ $category->name }}</a></li>
                                         @endforeach
                                     </ul>                                    
                                     <div class="clear"></div>

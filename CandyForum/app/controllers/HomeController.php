@@ -61,8 +61,9 @@ class HomeController extends BaseController {
 	        $users->email = Input::get('email');
 	        $users->save();
 
-	        $name = Input::get('name');       
-	        return View::make('thanks')->with('name', $name);
+	        //$name = Input::get('name');
+	        //return View::make('index')->with('name', $name);
+            return Redirect::to('/');
 
 	    }
 	}

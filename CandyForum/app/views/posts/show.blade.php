@@ -1,36 +1,31 @@
-@extends('layouts.default')
-@section('content')
-<div class="date-outer">
-    <div class="date-posts">
-        <div class="post-outer">
-        	<?php foreach ($posts as $post) { ?>
-	            <article class="post hentry">
-	                <div class="post-body entry-content clearfix">
-	                    <div class="bpostmeta">
-	                        <span><i class="fa fa-clock-o"></i><?php echo date("jS F, Y", strtotime($post["created_at"])); ?></span>
-	                        <span><i class="fa fa-user"></i> Posted by <?php echo $post["author"]; ?></span>
-	                        <span><i class="fa fa-bookmark"></i><?php echo $post["tags"];?></span>
-	                        <span><i class="fa fa-comments"></i>1 comment</span>
-	                    </div>
-	                    <h2 class="post-title entry-title"><span class="post_title_icon"></span>
-	                        <a href="#"><?php echo $post["header"];?></a>
-	                    </h2>
-	                
-	                    <div class="entry-colors">
-	                        <div class="color_col_1"></div>
-	                        <div class="color_col_2"></div>
-	                        <div class="color_col_3"></div>
-	                    </div>
-	                    <div id="">
-	                        <div><?php echo substr($post["content"], 0, 200); ?></div>
-	                    </div>
-	                </div>
-	            </article>
-	            <div style="clear: both;"></div>
-            <?php } ?>
-        </div>
-    </div>
+@extends ('layouts.default')
+@section ('content')
+<?php $posts = $post; ?>
+<div>
+    <?php var_dump($posts); ?>
 </div>
+<div class="thread">
+    <div class="answerBox"></div>
+    <button id="answer-button" type="button" onclick="addAnswer()">Answer</button>
 </div>
-<div style="clear: both;"></div>
+<form action="" method="post" id="answer-form" class="col-lg-12 form-group">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
+    <input type="hidden" name="author_id" value="{{ Auth::id() }}"/>
+    @if(Auth::id() == 0)
+    <input type="email" name="author" required placeholder="Enter email"/>
+    @endif
+    <textarea name="content" id="answer" class="form-control"></textarea>
+    <input type="submit" value="Submit" class="btn btn-md btn-default"/>
+    <a class="small" style="float: right" href="http://ckeditor.com/" target="_blank">CKEditor Open Source</a>
+    <script>
+        CKEDITOR.replace('answer');
+    </script>
+</form>
+<script>
+    //$('#answer-form').hide();
+    document.getElementById('answer-form').style.display = 'none';
+</script>
+
+<h1>Guest user id: 0</h1>
+<h1>Registered user id != 0</h1>
 @stop

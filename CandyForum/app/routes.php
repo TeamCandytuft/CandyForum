@@ -46,6 +46,13 @@ Route::get('/', function()
         $tag_table->string('name', 100)->unique();
         $tag_table->timestamps();
     });
+    Schema::create('answers', function($answer_table){
+        $answer_table->increments('id');
+        $answer_table->string('content', 300);
+        $answer_table->integer('post_index');
+        $answer_table->integer('author_id');
+        $answer_table->timestamps();
+    });
     */
 	return View::make('index');
 });
@@ -69,7 +76,9 @@ Route::get('spotlight', array(
 ));
 
 /* --- POSTS ROUTES --- */
-Route::get('posts', array('before' => 'auth', 'uses' => 'PostController@index'));
+Route::get('posts/show', array('uses' => 'PostController@index'));
 Route::post('posts', array('before' => 'csrf', 'uses' => 'PostController@store'));
 Route::get('posts/create', array('before' => 'auth', 'uses' => 'PostController@create'));
-Route::get('posts/show/{id}', array('uses' => 'PostController@show@$id'));
+Route::get('posts/show/category/{id}', array('uses' => 'PostController@show@$id'));
+Route::get('posts/show/{id}', array('uses' => 'PostController@showPost@$id'));
+Route::post('posts/show/{id}', array('uses' => 'AnswerController@store@$id'));
