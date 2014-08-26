@@ -67,6 +67,10 @@ Route::post('/login', array('uses' => 'HomeController@doLogin'));
 
 Route::get('logout', array('uses' => 'HomeController@doLogout'));
 
+Route::get('/tags', function(){
+    $tags = Tags::getTags();
+    return Response::json($tags);
+});
 
 /* --- POSTS ROUTES --- */
 Route::get('posts/show', array('uses' => 'PostController@index'));

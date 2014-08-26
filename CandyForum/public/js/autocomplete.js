@@ -25,10 +25,18 @@ $(function() {
             }
         })
         .autocomplete({
-            minLength: 0,
+            minLength: 1,
             source: function( request, response ) {
-                response( $.ui.autocomplete.filter(
-                    availableTags, extractLast( request.term ) ) );
+                $.ajax({
+                    url: "/tags",
+                    dataType: "json",
+                    data: {
+                        q: request.term
+                    },
+                    success: function( data ) {
+                        response( data );
+                    }
+                });
             },
             focus: function() {
                 return false;
