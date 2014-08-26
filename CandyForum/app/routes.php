@@ -57,6 +57,12 @@ Route::get('/', function()
 	return View::make('index');
 });
 
+Route::get('/tags', function(){
+    //return View::make('posts.tags');
+    $tags = Tags::getTags();
+    return Response::json($tags);
+});
+
 Route::get('/register', array('uses' => 'HomeController@showRegister'));
 
 Route::post('/register', array('uses' => 'HomeController@doRegister'));
