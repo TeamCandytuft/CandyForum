@@ -57,15 +57,24 @@ class PostController extends \BaseController {
 
     public function showPost($id)
     {
+        $result = array();
         $post = Posts::allPosts($id);
         $answers = Answers::allAnswers($id);
-        $result = array();
+
+        if(!isset($result['post']))
+        {
+            $result['post'] = array();
+            $result['answers'] = array();
+        }
+
         $result['post'] = $post;
         $count = 0;
+
         foreach($answers as $answer){
             $result['answers'][$count] = $answer['original'];
             $count += 1;
         }
+
         return View::make('posts.show')->with('post', $result);
     }
 

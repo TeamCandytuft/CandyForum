@@ -31,7 +31,7 @@ class HomeController extends BaseController {
 		$messages = array(
         'required' => 'The :attribute is really really really important.',
         'same'  => 'The :others must match.',
-        'alpha' => 'The field shoud contain only letters'
+        'alpha' => 'The field should contain only letters'
     	);
 
 	    $validator = Validator::make(Input::all(), User::$rules);
@@ -63,7 +63,7 @@ class HomeController extends BaseController {
 
 	        //$name = Input::get('name');
 	        //return View::make('index')->with('name', $name);
-            return Redirect::to('/');
+            return Redirect::to('/')->with('flash-content', "You are registered");
 
 	    }
 	}
