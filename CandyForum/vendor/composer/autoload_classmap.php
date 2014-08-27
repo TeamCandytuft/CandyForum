@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Answer' => $baseDir . '/app/models/Answer.php',
+    'AnswerController' => $baseDir . '/app/controllers/AnswerController.php',
+    'Answers' => $baseDir . '/app/models/Answers.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
@@ -29,6 +32,8 @@ return array(
     'ClassPreloader\\Parser\\DirVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/DirVisitor.php',
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
+    'CreateAdmin' => $baseDir . '/app/database/migrations/2014_08_27_094114_create_admin.php',
+    'CreateAnswers' => $baseDir . '/app/database/migrations/2014_08_27_001827_create_answers.php',
     'CreateCategories' => $baseDir . '/app/database/migrations/2014_08_25_100225_create_categories.php',
     'CreatePosts' => $baseDir . '/app/database/migrations/2014_08_24_100649_create_posts.php',
     'CreateTags' => $baseDir . '/app/database/migrations/2014_08_25_201629_create_tags.php',
@@ -1566,8 +1571,10 @@ return array(
     'Symfony\\Component\\Translation\\Writer\\TranslationWriter' => $vendorDir . '/symfony/translation/Symfony/Component/Translation/Writer/TranslationWriter.php',
     'System_SSH_Agent' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
     'System_SSH_Agent_Identity' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
+    'Tag' => $baseDir . '/app/models/Tag.php',
+    'Tags' => $baseDir . '/app/models/Tags.php',
     'TestCase' => $baseDir . '/app/tests/TestCase.php',
-    'User' => $baseDir . '/app/models/User.php',
+    'User' => $baseDir . '/app/models/Admin.php',
     'Whoops\\Exception\\ErrorException' => $vendorDir . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
     'Whoops\\Exception\\Formatter' => $vendorDir . '/filp/whoops/src/Whoops/Exception/Formatter.php',
     'Whoops\\Exception\\Frame' => $vendorDir . '/filp/whoops/src/Whoops/Exception/Frame.php',

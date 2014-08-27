@@ -77,9 +77,9 @@
 				<div class="color_col_3"></div>
 			</div>
 			<div id="summary2165021750605474041">
-				<img class="pbtthumbimg" src="http://1.bp.blogspot.com/-KeFWnl1J5fI/UrWFQ7bWuTI/AAAAAAAAJr4/IMMCkGR_Du0/s1600/3.jpg">
+				<img class="pbtthumbimg" src="http://hadzhiyski.softuni-friends.org/wp/wp-content/uploads/2014/06/profile_img.jpg">
 				<div>
-					Main developer of the project.
+					Main backend developer of the project.
 				</div>
 			</div>
 			<div style="clear: both;"></div>

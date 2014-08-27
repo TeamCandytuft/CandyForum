@@ -37,7 +37,7 @@
                     <div id="headersec" class="headersec section">
                         <div id="Header1" class="widget Header">
                             <div id="header-inner">
-                                <a style="display: block" href="/">
+                                <a style="display: block" href="/admin">
                                     <img height="100" style="display: block;padding:15px 0px 0px 0px;margin: 0px auto;" src="{{asset ('./css/logo.png')}}" id="Header1_headerimg" alt="CandyForum">
                                 </a>
                             </div>
@@ -104,17 +104,16 @@
                                     <div class="widget-content">
                                         <ul>
                                             <li><a href="/posts/create">Add Post</a></li>
-                                            <li><a href="/user/posts/show">My questions</a></li>
-                                            <li><a href="#">Profile</a></li>
-                                            <li><a href="/logout">Log out</a></li>
+                                            <li><a href="/admin/posts/show">All Posts</a></li>
+                                            <li><a href="/admin/users">All users</a></li>
+                                            <li><a href="/admin/logout">Log out</a></li>
                                         </ul>
                                     </div>
                                 @else
-                                    <h2 class="title"><a href="/login">Log In</a></h2>
-                                    <h2 class="title"><a href="/register">Register</a></h2>
+                                    <h2 class="title"><a href="/admin/login">Log In</a></h2>
                                 @endif
-                                <h2 class="title">Powered by <a href="http://softuni.bg" target="_blank">Softuni</a> and Team Candytuft</h2>
-                                <h2 class="title"><a href="https://github.com/TeamCandytuft/CandyForum" target="_blank">GitHub Team Profile</a></h2>
+                                <div class="mini_divider"></div>
+                                    <h2 class="title">Powered by <a href="http://softuni.bg" target="_blank">Softuni</a> and Team Candytuft</h2>
                                 <div class="clear"></div>
                             </div>
                             <!--<div class="widget HTML" id="HTML1">

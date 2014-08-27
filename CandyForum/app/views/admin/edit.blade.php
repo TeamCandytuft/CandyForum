@@ -27,8 +27,8 @@
     }
 </style>
 
-<h1>Ask new question</h1>
-<form action="/posts" method="post" id="comment-form" class="col-lg-12 form-group">
+<h1>Edit question</h1>
+<form action="/admin/posts/{{ $id }}/edit" method="post" id="comment-form" class="col-lg-12 form-group">
     <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
     <input type="text" name="header" placeholder="Title..." class="form-control"/>
     <textarea name="content" id="editor" class="form-control"></textarea>

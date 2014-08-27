@@ -15,7 +15,7 @@
                         <span><i class="fa fa-bookmark"></i><?php echo $post["tags"];?></span>
                     </div>
                     <h2 class="post-title entry-title">
-                        <a href="/posts/show/{{ $post['id'] }}"><?php echo $post["header"];?></a>
+                        <a href="/posts/show/{{ $post['id'] }}"><?php echo htmlentities($post["header"]);?></a>
                     </h2>
                 
                     <div class="entry-colors">

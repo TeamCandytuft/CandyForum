@@ -12,7 +12,7 @@
 	                        <span><i class="fa fa-bookmark"></i><?php echo $post["tags"];?></span>
 	                    </div>
 	                    <h2 class="post-title entry-title"><span class="post_title_icon"></span>
-	                        <a href="/posts/show/{{ $post['id']}}"><?php echo $post["header"];?></a>
+	                        <a href="/posts/show/{{ $post['id']}}"><?php echo htmlentities($post["header"]);?></a>
 	                    </h2>
 	                
 	                    <div class="entry-colors">
@@ -21,7 +21,7 @@
 	                        <div class="color_col_3"></div>
 	                    </div>
 	                    <div id="">
-	                        <div><?php echo substr($post["content"], 0, 200); ?></div>
+	                        <div><?php echo htmlentities(substr($post["content"], 0, 200)); ?></div>
 	                    </div>
 	                </div>
 	            </article>

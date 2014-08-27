@@ -1,9 +1,9 @@
-@extends('layouts.default')
+@extends('layouts.admin')
 @section('content')
 <div class="date-outer">
     <div class="date-posts">
         <div class="post-outer">
-        	<?php foreach ($posts as $post) {?>
+        	<?php foreach ($posts as $post) { ?>
 	            <article class="post hentry">
 	                <div class="post-body entry-content clearfix">
 	                    <div class="bpostmeta">
@@ -21,8 +21,12 @@
 	                        <div class="color_col_3"></div>
 	                    </div>
 	                    <div id="">
-	                        <div><?php echo htmlentities(substr($post["content"], 0, 200)); ?></div>
+	                        <div>{{ htmlentities($post['content']) }}</div>
 	                    </div>
+                        <div>
+                            <button type="button"><a href="/admin/posts/{{ $post['id'] }}/edit">Edit</a></button>
+                            <button type="button"><a href="/admin/posts/{{ $post['id'] }}/delete">Delete</a></button>
+                        </div>
 	                </div>
 	            </article>
 	            <div style="clear: both;"></div>

@@ -11,6 +11,10 @@ class Posts{
         {
             $posts = Post::where('category_id', '=', $id)->get();
         }
+        else if($flag == 'user')
+        {
+            $posts = Post::where('author_id', '=', $id)->get();
+        }
         $result = array();
         $count = 0;
         foreach($posts as $post){

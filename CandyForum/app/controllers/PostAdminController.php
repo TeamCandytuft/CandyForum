@@ -1,6 +1,6 @@
 <?php
 
-class PostController extends \BaseController {
+class PostAdminController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -10,7 +10,7 @@ class PostController extends \BaseController {
 	public function index()
 	{
         $result = Posts::allPosts();
-		return View::make('posts.index')->with('posts', $result);
+		return View::make('admin.showAdmin')->with('posts', $result);
 	}
 
 
@@ -83,12 +83,6 @@ class PostController extends \BaseController {
         return View::make('posts.show')->with('post', $result);
     }
 
-    public function userPosts(){
-        $author_id = Auth::id();
-        $posts = Posts::allPosts($author_id, "user");
-        return View::make('posts.showAll')->with('posts', $posts);
-    }
-
 	/**
 	 * Show the form for editing the specified resource.
 	 *
@@ -97,14 +91,7 @@ class PostController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$post = Post::where('id', '=', $id)->get();
-        $post->header = $_POST['header'];
-        $post->content = $_POST['content'];
-        $post->author_id = Auth::user()->id;
-        $post->category_id = $_POST['category'];
-        $post->tags = 'empty tag';
-        $post->update();
-        return View::make('posts.show@'.$id);
+		return View::make('admin.edit')->with('id', $id);
 	}
 
 
@@ -116,7 +103,15 @@ class PostController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$post = Post::find($id);
+        $post->id = $id;
+        $post->header = $_POST['header'];
+        $post->content = $_POST['content'];
+        $post->category_id = $_POST['category'];
+        $post->tags = substr($_POST['tags'], 0, strlen($_POST['tags']) - 2);
+        $post->save();
+        $posts = Posts::allPosts();
+        return View::make('admin.showAdmin')->with('posts', $posts);
 	}
 
 
@@ -128,7 +123,10 @@ class PostController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$post = Post::find($id);
+        $post->delete();
+        $posts = Posts::allPosts();
+        return View::make('admin.showAdmin')->with('posts', $posts);
 	}
 
 
