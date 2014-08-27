@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="{{ asset('./css/main.css') }}"/> old -->
     <!-- new styles -->
     <link href="{{ asset('./css/font-awesome.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/css.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('./css/css.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('./css/style.css') }}" rel="stylesheet" type="text/css" >
     
     <script src="{{ asset('./js/jquery-1.11.1.min.js') }}"></script>
-    <script src="{{ asset('js/migrate.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/modernizr.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/all.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('./js/migrate.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('./js/modernizr.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('./js/all.js') }}" type="text/javascript"></script>
     <!-- end new styles -->
     
     <script src="{{ asset('./js/bootstrap.min.js') }}"></script>
@@ -34,6 +34,15 @@
                 <!-- begin header -->
                 <header class="wrapperbpart clearfix">
                     <!-- begin logo -->
+                    <div id="headersec" class="headersec section">
+                        <div id="Header1" class="widget Header">
+                            <div id="header-inner">
+                                <a style="display: block" href="/">
+                                    <img height="100" style="display: block;padding:15px 0px 0px 0px;margin: 0px auto;" src="{{asset ('./css/logo.png')}}" id="Header1_headerimg" alt="CandyForum">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- end logo -->
 
                     <div class="mini_divider"></div>
