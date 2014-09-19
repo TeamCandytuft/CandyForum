@@ -35,6 +35,7 @@ class PostController extends \BaseController {
 		$post = new Post;
         $post->header = $_POST['header'];
         $post->content = $_POST['content'];
+        $post->views = 0;
         $post->author_id = Auth::user()->id;
         $post->category_id = $_POST['category'];
         $post->tags = substr($_POST['tags'], 0, strlen($_POST['tags']) - 2);
@@ -44,7 +45,7 @@ class PostController extends \BaseController {
 	}
 
     public function search(){
-        $result = Post::where('header', 'LIKE', $_POST['query'])->get();
+        $result = Post::where('header', 'LIKE', '%%'.$_POST['query'].'%%')->get();
         return View::make('posts.search')->with('posts', $result);
     }
 
@@ -63,7 +64,14 @@ class PostController extends \BaseController {
     public function showPost($id)
     {
         $result = array();
+        
+        $visitedPost = Post::find($id);
+        $views = $visitedPost->views;
+        $visitedPost->views = $views + 1;
+        $visitedPost->save();
+        
         $post = Posts::allPosts($id);
+        
         $answers = Answers::allAnswers($id);
 
         if(!isset($result['post']))
@@ -79,6 +87,7 @@ class PostController extends \BaseController {
             $result['answers'][$count] = $answer['original'];
             $count += 1;
         }
+       
 
         return View::make('posts.show')->with('post', $result);
     }

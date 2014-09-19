@@ -10,6 +10,7 @@
 	                        <span><i class="fa fa-clock-o"></i><?php echo date("jS F, Y", strtotime($post["created_at"])); ?></span>
 	                        <span><i class="fa fa-user"></i> Posted by <?php echo $post["author"]; ?></span>
 	                        <span><i class="fa fa-bookmark"></i><?php echo $post["tags"];?></span>
+	                        <span><i class="fa fa-clock-o"></i><?php echo $post['views']; ?></span>
 	                    </div>
 	                    <h2 class="post-title entry-title"><span class="post_title_icon"></span>
 	                        <a href="/posts/show/{{ $post['id']}}"><?php echo htmlentities($post["header"]);?></a>
@@ -21,7 +22,7 @@
 	                        <div class="color_col_3"></div>
 	                    </div>
 	                    <div id="">
-	                        <div><?php echo htmlentities(substr($post["content"], 0, 200)); ?></div>
+	                    	<div>{{ htmlspecialchars(stripslashes(substr($post['content'], 0, 200))) }}...</div>
 	                    </div>
 	                </div>
 	            </article>

@@ -46,3 +46,8 @@ Route::get('admin/posts/show', array('uses' => 'PostAdminController@index'));
 Route::get('admin/posts/{id}/edit', array('uses' => 'PostAdminController@edit@$id'));
 Route::post('admin/posts/{id}/edit', array('uses' => 'PostAdminController@update@$id'));
 Route::get('admin/posts/{id}/delete', array('uses' => 'PostAdminController@destroy@$id'));
+
+App::missing(function($e) {
+    //return Response::view('index', array(), 404);
+    return Redirect::to('/');
+});

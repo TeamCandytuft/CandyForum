@@ -25,8 +25,11 @@
         margin-top:10px;
         width:350px;
     }
+    .ui-menu .iu-menu-item{
+	z-index: 100 !important;
+	background: red !important;
+}
 </style>
-
 <h1>Ask new question</h1>
 <form action="/posts" method="post" id="comment-form" class="col-lg-12 form-group">
     <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
@@ -35,9 +38,9 @@
     <script>
         CKEDITOR.replace('editor');
     </script>
-    <input style="z-index: 100" name="tags" id="tags" class="form-control" placeholder="Tags..." />
+    <input style="z-index: 50 !important;" name="tags" id="tags" class="form-control" placeholder="Tags..." />
     <script src="{{ asset('./js/autocomplete.js') }}"></script>
-    <select style="z-index: 1" class="form-control" name="category">
+    <select class="form-control" name="category">
         <option value="-1" disabled selected>Category</option>
         <?php $categories = Category::all(); ?>
         @foreach($categories as $category)
